@@ -1,7 +1,8 @@
 import express from "express";
 import { ListBucketsCommand, S3Client, ListObjectsV2Command, GetObjectCommand } from "@aws-sdk/client-s3";
 const router = express.Router();
-const client = new S3Client({region: eu-west-1});
+const REGION = "ap-northeast-1";
+const client = new S3Client({region: REGION});
 
 // GET 
 //Expres ルーター動作確認
